@@ -238,4 +238,11 @@ To urgently fix this bug for Kubernetes 1.15 or earlier, build a custom kube-api
 
 See ["kube-apiserver 1.13.x refuses to work when first etcd-server is not available"](https://github.com/kubernetes/kubernetes/issues/72102).
 
+
+single Node Cluster:
+Default Etcd Directory: /etc/kubernetes/pki/etcd/
+sudo ETCDCTL_API=3 etcdctl snapshot save snapshot.db --cacert /etc/kubernetes/pki/etcd/server.crt --cert /etc/kubernetes/pki/etcd/ca.crt --key /etc/kubernetes/pki/etcd/ca.key
+
 {{% /capture %}}
+
+
